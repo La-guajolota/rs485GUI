@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92319CD21C4B8561002EB9D5 /* _bixolon_logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 92319CAC1C4B8561002EB9D5 /* _bixolon_logo.gif */; };
+		92319CD31C4B8561002EB9D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92319CAE1C4B8561002EB9D5 /* AppDelegate.m */; };
+		92319CD41C4B8561002EB9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92319CAF1C4B8561002EB9D5 /* Assets.xcassets */; };
+		92319CD51C4B8561002EB9D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92319CB01C4B8561002EB9D5 /* LaunchScreen.storyboard */; };
+		92319CD71C4B8561002EB9D5 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92319CB41C4B8561002EB9D5 /* Main_iPad.storyboard */; };
+		92319CD81C4B8561002EB9D5 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92319CB61C4B8561002EB9D5 /* Main_iPhone.storyboard */; };
+		92319CDA1C4B8561002EB9D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92319CB91C4B8561002EB9D5 /* main.m */; };
+		92319CDC1C4B8561002EB9D5 /* Sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 92319CBC1C4B8561002EB9D5 /* Sample.png */; };
+		92319CDD1C4B8561002EB9D5 /* testPDF.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 92319CBD1C4B8561002EB9D5 /* testPDF.pdf */; };
+		92319CDE1C4B8561002EB9D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92319CBF1C4B8561002EB9D5 /* ViewController.m */; };
+		92319CDF1C4B8561002EB9D5 /* ViewController_CashDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92319CC11C4B8561002EB9D5 /* ViewController_CashDrawer.m */; };
+		92319CE01C4B8561002EB9D5 /* ViewController_MSR.m in Sources */ = {isa = PBXBuildFile; fileRef = 92319CC31C4B8561002EB9D5 /* ViewController_MSR.m */; };
+		92319CE11C4B8561002EB9D5 /* ViewController_Printer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92319CC51C4B8561002EB9D5 /* ViewController_Printer.m */; };
+		92319CE21C4B8561002EB9D5 /* ViewController_PrinterSubViewBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 92319CC71C4B8561002EB9D5 /* ViewController_PrinterSubViewBarcode.m */; };
+		92319CE31C4B8561002EB9D5 /* ViewController_PrinterSubViewBitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 92319CC91C4B8561002EB9D5 /* ViewController_PrinterSubViewBitmap.m */; };
+		92319CE41C4B8561002EB9D5 /* ViewController_PrinterSubViewEventHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 92319CCB1C4B8561002EB9D5 /* ViewController_PrinterSubViewEventHistory.m */; };
+		92319CE51C4B8561002EB9D5 /* ViewController_PrinterSubViewText.m in Sources */ = {isa = PBXBuildFile; fileRef = 92319CCD1C4B8561002EB9D5 /* ViewController_PrinterSubViewText.m */; };
+		92319CE61C4B8561002EB9D5 /* ViewController_SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92319CCF1C4B8561002EB9D5 /* ViewController_SubView.m */; };
+		92319CE71C4B8561002EB9D5 /* ViewController_SubViewAddPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 92319CD11C4B8561002EB9D5 /* ViewController_SubViewAddPrinter.m */; };
+		92319D071C4B8752002EB9D5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92319D061C4B8752002EB9D5 /* Info.plist */; };
+		92319D091C4B878C002EB9D5 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92319D081C4B878C002EB9D5 /* ExternalAccessory.framework */; };
+		928C81A11C62015200CFF574 /* libBixolonUPOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 928C81A01C62015200CFF574 /* libBixolonUPOS.a */; };
+		92B532331C4B981100A7FDA9 /* ViewController_SCR.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B532321C4B981100A7FDA9 /* ViewController_SCR.m */; };
+		92B5323A1C4B9CE300A7FDA9 /* ViewController_SubViewAddCashDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B532351C4B9CE300A7FDA9 /* ViewController_SubViewAddCashDrawer.m */; };
+		92B5323B1C4B9CE300A7FDA9 /* ViewController_SubViewAddMSR.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B532371C4B9CE300A7FDA9 /* ViewController_SubViewAddMSR.m */; };
+		92B5323C1C4B9CE300A7FDA9 /* ViewController_SubViewAddSCR.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B532391C4B9CE300A7FDA9 /* ViewController_SubViewAddSCR.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		92319C911C4B850F002EB9D5 /* sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92319CAC1C4B8561002EB9D5 /* _bixolon_logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = _bixolon_logo.gif; sourceTree = "<group>"; };
+		92319CAD1C4B8561002EB9D5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		92319CAE1C4B8561002EB9D5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		92319CAF1C4B8561002EB9D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92319CB11C4B8561002EB9D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92319CB51C4B8561002EB9D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		92319CB71C4B8561002EB9D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		92319CB91C4B8561002EB9D5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92319CBB1C4B8561002EB9D5 /* Sample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sample-Prefix.pch"; sourceTree = "<group>"; };
+		92319CBC1C4B8561002EB9D5 /* Sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sample.png; sourceTree = "<group>"; };
+		92319CBD1C4B8561002EB9D5 /* testPDF.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = testPDF.pdf; sourceTree = "<group>"; };
+		92319CBE1C4B8561002EB9D5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		92319CBF1C4B8561002EB9D5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		92319CC01C4B8561002EB9D5 /* ViewController_CashDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_CashDrawer.h; sourceTree = "<group>"; };
+		92319CC11C4B8561002EB9D5 /* ViewController_CashDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_CashDrawer.m; sourceTree = "<group>"; };
+		92319CC21C4B8561002EB9D5 /* ViewController_MSR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_MSR.h; sourceTree = "<group>"; };
+		92319CC31C4B8561002EB9D5 /* ViewController_MSR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_MSR.m; sourceTree = "<group>"; };
+		92319CC41C4B8561002EB9D5 /* ViewController_Printer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_Printer.h; sourceTree = "<group>"; };
+		92319CC51C4B8561002EB9D5 /* ViewController_Printer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_Printer.m; sourceTree = "<group>"; };
+		92319CC61C4B8561002EB9D5 /* ViewController_PrinterSubViewBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_PrinterSubViewBarcode.h; sourceTree = "<group>"; };
+		92319CC71C4B8561002EB9D5 /* ViewController_PrinterSubViewBarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_PrinterSubViewBarcode.m; sourceTree = "<group>"; };
+		92319CC81C4B8561002EB9D5 /* ViewController_PrinterSubViewBitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_PrinterSubViewBitmap.h; sourceTree = "<group>"; };
+		92319CC91C4B8561002EB9D5 /* ViewController_PrinterSubViewBitmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_PrinterSubViewBitmap.m; sourceTree = "<group>"; };
+		92319CCA1C4B8561002EB9D5 /* ViewController_PrinterSubViewEventHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_PrinterSubViewEventHistory.h; sourceTree = "<group>"; };
+		92319CCB1C4B8561002EB9D5 /* ViewController_PrinterSubViewEventHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_PrinterSubViewEventHistory.m; sourceTree = "<group>"; };
+		92319CCC1C4B8561002EB9D5 /* ViewController_PrinterSubViewText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_PrinterSubViewText.h; sourceTree = "<group>"; };
+		92319CCD1C4B8561002EB9D5 /* ViewController_PrinterSubViewText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_PrinterSubViewText.m; sourceTree = "<group>"; };
+		92319CCE1C4B8561002EB9D5 /* ViewController_SubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_SubView.h; sourceTree = "<group>"; };
+		92319CCF1C4B8561002EB9D5 /* ViewController_SubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_SubView.m; sourceTree = "<group>"; };
+		92319CD01C4B8561002EB9D5 /* ViewController_SubViewAddPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_SubViewAddPrinter.h; sourceTree = "<group>"; };
+		92319CD11C4B8561002EB9D5 /* ViewController_SubViewAddPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_SubViewAddPrinter.m; sourceTree = "<group>"; };
+		92319D061C4B8752002EB9D5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92319D081C4B878C002EB9D5 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		928C81941C62015200CFF574 /* BixolonUPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BixolonUPOS.h; sourceTree = "<group>"; };
+		928C81951C62015200CFF574 /* UPOSCDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPOSCDController.h; sourceTree = "<group>"; };
+		928C81961C62015200CFF574 /* UPOSDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPOSDefines.h; sourceTree = "<group>"; };
+		928C81971C62015200CFF574 /* UPOSDefinesCashDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPOSDefinesCashDrawer.h; sourceTree = "<group>"; };
+		928C81981C62015200CFF574 /* UPOSDefinesPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPOSDefinesPrinter.h; sourceTree = "<group>"; };
+		928C81991C62015200CFF574 /* UPOSDefinesScr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPOSDefinesScr.h; sourceTree = "<group>"; };
+		928C819A1C62015200CFF574 /* UPOSDeviceControlDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPOSDeviceControlDelegate.h; sourceTree = "<group>"; };
+		928C819B1C62015200CFF574 /* UPOSDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPOSDeviceController.h; sourceTree = "<group>"; };
+		928C819C1C62015200CFF574 /* UPOSDevices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPOSDevices.h; sourceTree = "<group>"; };
+		928C819D1C62015200CFF574 /* UPOSMSRController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPOSMSRController.h; sourceTree = "<group>"; };
+		928C819E1C62015200CFF574 /* UPOSPrinterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPOSPrinterController.h; sourceTree = "<group>"; };
+		928C819F1C62015200CFF574 /* UPOSSCRController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPOSSCRController.h; sourceTree = "<group>"; };
+		928C81A01C62015200CFF574 /* libBixolonUPOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBixolonUPOS.a; sourceTree = "<group>"; };
+		92B532311C4B981100A7FDA9 /* ViewController_SCR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_SCR.h; sourceTree = "<group>"; };
+		92B532321C4B981100A7FDA9 /* ViewController_SCR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_SCR.m; sourceTree = "<group>"; };
+		92B532341C4B9CE300A7FDA9 /* ViewController_SubViewAddCashDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_SubViewAddCashDrawer.h; sourceTree = "<group>"; };
+		92B532351C4B9CE300A7FDA9 /* ViewController_SubViewAddCashDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_SubViewAddCashDrawer.m; sourceTree = "<group>"; };
+		92B532361C4B9CE300A7FDA9 /* ViewController_SubViewAddMSR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_SubViewAddMSR.h; sourceTree = "<group>"; };
+		92B532371C4B9CE300A7FDA9 /* ViewController_SubViewAddMSR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_SubViewAddMSR.m; sourceTree = "<group>"; };
+		92B532381C4B9CE300A7FDA9 /* ViewController_SubViewAddSCR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_SubViewAddSCR.h; sourceTree = "<group>"; };
+		92B532391C4B9CE300A7FDA9 /* ViewController_SubViewAddSCR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_SubViewAddSCR.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92319C8E1C4B850F002EB9D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				928C81A11C62015200CFF574 /* libBixolonUPOS.a in Frameworks */,
+				92319D091C4B878C002EB9D5 /* ExternalAccessory.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92319C881C4B850E002EB9D5 = {
+			isa = PBXGroup;
+			children = (
+				928C81921C62015200CFF574 /* lib */,
+				92319D081C4B878C002EB9D5 /* ExternalAccessory.framework */,
+				92319CAB1C4B8561002EB9D5 /* sample */,
+				92319C921C4B850F002EB9D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92319C921C4B850F002EB9D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92319C911C4B850F002EB9D5 /* sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92319CAB1C4B8561002EB9D5 /* sample */ = {
+			isa = PBXGroup;
+			children = (
+				92319D061C4B8752002EB9D5 /* Info.plist */,
+				92319CAC1C4B8561002EB9D5 /* _bixolon_logo.gif */,
+				92319CAD1C4B8561002EB9D5 /* AppDelegate.h */,
+				92319CAE1C4B8561002EB9D5 /* AppDelegate.m */,
+				92319CAF1C4B8561002EB9D5 /* Assets.xcassets */,
+				92319CB01C4B8561002EB9D5 /* LaunchScreen.storyboard */,
+				92319CB41C4B8561002EB9D5 /* Main_iPad.storyboard */,
+				92319CB61C4B8561002EB9D5 /* Main_iPhone.storyboard */,
+				92319CB91C4B8561002EB9D5 /* main.m */,
+				92319CBB1C4B8561002EB9D5 /* Sample-Prefix.pch */,
+				92319CBC1C4B8561002EB9D5 /* Sample.png */,
+				92319CBD1C4B8561002EB9D5 /* testPDF.pdf */,
+				92319CBE1C4B8561002EB9D5 /* ViewController.h */,
+				92319CBF1C4B8561002EB9D5 /* ViewController.m */,
+				92319CC01C4B8561002EB9D5 /* ViewController_CashDrawer.h */,
+				92319CC11C4B8561002EB9D5 /* ViewController_CashDrawer.m */,
+				92319CC21C4B8561002EB9D5 /* ViewController_MSR.h */,
+				92319CC31C4B8561002EB9D5 /* ViewController_MSR.m */,
+				92B532311C4B981100A7FDA9 /* ViewController_SCR.h */,
+				92B532321C4B981100A7FDA9 /* ViewController_SCR.m */,
+				92319CC41C4B8561002EB9D5 /* ViewController_Printer.h */,
+				92319CC51C4B8561002EB9D5 /* ViewController_Printer.m */,
+				92319CC61C4B8561002EB9D5 /* ViewController_PrinterSubViewBarcode.h */,
+				92319CC71C4B8561002EB9D5 /* ViewController_PrinterSubViewBarcode.m */,
+				92319CC81C4B8561002EB9D5 /* ViewController_PrinterSubViewBitmap.h */,
+				92319CC91C4B8561002EB9D5 /* ViewController_PrinterSubViewBitmap.m */,
+				92319CCA1C4B8561002EB9D5 /* ViewController_PrinterSubViewEventHistory.h */,
+				92319CCB1C4B8561002EB9D5 /* ViewController_PrinterSubViewEventHistory.m */,
+				92319CCC1C4B8561002EB9D5 /* ViewController_PrinterSubViewText.h */,
+				92319CCD1C4B8561002EB9D5 /* ViewController_PrinterSubViewText.m */,
+				92319CCE1C4B8561002EB9D5 /* ViewController_SubView.h */,
+				92319CCF1C4B8561002EB9D5 /* ViewController_SubView.m */,
+				92319CD01C4B8561002EB9D5 /* ViewController_SubViewAddPrinter.h */,
+				92319CD11C4B8561002EB9D5 /* ViewController_SubViewAddPrinter.m */,
+				92B532341C4B9CE300A7FDA9 /* ViewController_SubViewAddCashDrawer.h */,
+				92B532351C4B9CE300A7FDA9 /* ViewController_SubViewAddCashDrawer.m */,
+				92B532361C4B9CE300A7FDA9 /* ViewController_SubViewAddMSR.h */,
+				92B532371C4B9CE300A7FDA9 /* ViewController_SubViewAddMSR.m */,
+				92B532381C4B9CE300A7FDA9 /* ViewController_SubViewAddSCR.h */,
+				92B532391C4B9CE300A7FDA9 /* ViewController_SubViewAddSCR.m */,
+			);
+			path = sample;
+			sourceTree = "<group>";
+		};
+		928C81921C62015200CFF574 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				928C81931C62015200CFF574 /* libBixolonUPOS */,
+				928C81A01C62015200CFF574 /* libBixolonUPOS.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		928C81931C62015200CFF574 /* libBixolonUPOS */ = {
+			isa = PBXGroup;
+			children = (
+				928C81941C62015200CFF574 /* BixolonUPOS.h */,
+				928C81951C62015200CFF574 /* UPOSCDController.h */,
+				928C81961C62015200CFF574 /* UPOSDefines.h */,
+				928C81971C62015200CFF574 /* UPOSDefinesCashDrawer.h */,
+				928C81981C62015200CFF574 /* UPOSDefinesPrinter.h */,
+				928C81991C62015200CFF574 /* UPOSDefinesScr.h */,
+				928C819A1C62015200CFF574 /* UPOSDeviceControlDelegate.h */,
+				928C819B1C62015200CFF574 /* UPOSDeviceController.h */,
+				928C819C1C62015200CFF574 /* UPOSDevices.h */,
+				928C819D1C62015200CFF574 /* UPOSMSRController.h */,
+				928C819E1C62015200CFF574 /* UPOSPrinterController.h */,
+				928C819F1C62015200CFF574 /* UPOSSCRController.h */,
+			);
+			path = libBixolonUPOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92319C901C4B850F002EB9D5 /* sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92319CA81C4B850F002EB9D5 /* Build configuration list for PBXNativeTarget "sample" */;
+			buildPhases = (
+				92319C8D1C4B850F002EB9D5 /* Sources */,
+				92319C8E1C4B850F002EB9D5 /* Frameworks */,
+				92319C8F1C4B850F002EB9D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sample;
+			productName = sample;
+			productReference = 92319C911C4B850F002EB9D5 /* sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92319C891C4B850E002EB9D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = savin;
+				TargetAttributes = {
+					92319C901C4B850F002EB9D5 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 92319C8C1C4B850E002EB9D5 /* Build configuration list for PBXProject "Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92319C881C4B850E002EB9D5;
+			productRefGroup = 92319C921C4B850F002EB9D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92319C901C4B850F002EB9D5 /* sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92319C8F1C4B850F002EB9D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92319CDC1C4B8561002EB9D5 /* Sample.png in Resources */,
+				92319CD71C4B8561002EB9D5 /* Main_iPad.storyboard in Resources */,
+				92319D071C4B8752002EB9D5 /* Info.plist in Resources */,
+				92319CD51C4B8561002EB9D5 /* LaunchScreen.storyboard in Resources */,
+				92319CD81C4B8561002EB9D5 /* Main_iPhone.storyboard in Resources */,
+				92319CD41C4B8561002EB9D5 /* Assets.xcassets in Resources */,
+				92319CD21C4B8561002EB9D5 /* _bixolon_logo.gif in Resources */,
+				92319CDD1C4B8561002EB9D5 /* testPDF.pdf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92319C8D1C4B850F002EB9D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92319CDF1C4B8561002EB9D5 /* ViewController_CashDrawer.m in Sources */,
+				92B5323B1C4B9CE300A7FDA9 /* ViewController_SubViewAddMSR.m in Sources */,
+				92319CDE1C4B8561002EB9D5 /* ViewController.m in Sources */,
+				92319CE01C4B8561002EB9D5 /* ViewController_MSR.m in Sources */,
+				92319CDA1C4B8561002EB9D5 /* main.m in Sources */,
+				92319CE51C4B8561002EB9D5 /* ViewController_PrinterSubViewText.m in Sources */,
+				92B532331C4B981100A7FDA9 /* ViewController_SCR.m in Sources */,
+				92319CE31C4B8561002EB9D5 /* ViewController_PrinterSubViewBitmap.m in Sources */,
+				92319CD31C4B8561002EB9D5 /* AppDelegate.m in Sources */,
+				92319CE41C4B8561002EB9D5 /* ViewController_PrinterSubViewEventHistory.m in Sources */,
+				92319CE21C4B8561002EB9D5 /* ViewController_PrinterSubViewBarcode.m in Sources */,
+				92B5323A1C4B9CE300A7FDA9 /* ViewController_SubViewAddCashDrawer.m in Sources */,
+				92319CE71C4B8561002EB9D5 /* ViewController_SubViewAddPrinter.m in Sources */,
+				92B5323C1C4B9CE300A7FDA9 /* ViewController_SubViewAddSCR.m in Sources */,
+				92319CE61C4B8561002EB9D5 /* ViewController_SubView.m in Sources */,
+				92319CE11C4B8561002EB9D5 /* ViewController_Printer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		92319CB01C4B8561002EB9D5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92319CB11C4B8561002EB9D5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		92319CB41C4B8561002EB9D5 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92319CB51C4B8561002EB9D5 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		92319CB61C4B8561002EB9D5 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92319CB71C4B8561002EB9D5 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92319CA61C4B850F002EB9D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92319CA71C4B850F002EB9D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92319CA91C4B850F002EB9D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sample/Sample-Prefix.pch";
+				INFOPLIST_FILE = sample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bixolon.sample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		92319CAA1C4B850F002EB9D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sample/Sample-Prefix.pch";
+				INFOPLIST_FILE = sample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bixolon.sample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92319C8C1C4B850E002EB9D5 /* Build configuration list for PBXProject "Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92319CA61C4B850F002EB9D5 /* Debug */,
+				92319CA71C4B850F002EB9D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92319CA81C4B850F002EB9D5 /* Build configuration list for PBXNativeTarget "sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92319CA91C4B850F002EB9D5 /* Debug */,
+				92319CAA1C4B850F002EB9D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92319C891C4B850E002EB9D5 /* Project object */;
+}
