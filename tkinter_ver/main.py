@@ -1,3 +1,9 @@
+"""
+Author  :   Adrián Silva Palafox
+Date    :   2026-3-4
+Brief   :   Main application for the leather measurement terminal. Provides a GUI
+            for real-time data display and session management. 
+"""
 import tkinter as tk
 from tkinter import ttk, messagebox
 from PIL import Image, ImageTk
@@ -9,7 +15,8 @@ from backend.data_manager import DataManager
 LOGO_DIR = os.path.join(os.path.dirname(__file__), "..", "docs", "companiesLogos")
 LOGO_LEFT = os.path.join(LOGO_DIR, "scaliniLogo.jpg")
 LOGO_RIGHT = os.path.join(LOGO_DIR, "clienteLogo.jpg")
-LOGO_SIZE = (100, 60)  # Width x Height for logo display
+CLIENT_LOGO_SIZE = (250, 150)   # Width x Height for logo display
+SCALINI_LOGO_SIZE = (400, 125)  # Size for Scalini logo
 
 
 class App:
@@ -18,7 +25,7 @@ class App:
         self.root.title("Terminal de Medición de Cuero")
         self.root.geometry("850x650")
         
-        self.data_manager = DataManager()
+        self.data_manager = DataManager() # Data manager instance for handling Excel files
         self.serial_processor = None
         self.is_running = False
         
@@ -29,12 +36,12 @@ class App:
         self._setup_ui()
         self._poll_queue()
 
-    def _load_logo(self, path):
+    def _load_logo(self, path, size):
         """Load and resize a logo image. Returns None if file not found."""
         if os.path.exists(path):
             try:
                 img = Image.open(path)
-                img = img.resize(LOGO_SIZE, Image.LANCZOS)
+                img = img.resize(size, Image.LANCZOS)
                 return ImageTk.PhotoImage(img)
             except Exception:
                 return None
@@ -46,7 +53,7 @@ class App:
         header_frame.pack(fill="x", padx=10, pady=10)
         
         # Left logo
-        self.logo_left_img = self._load_logo(LOGO_LEFT)
+        self.logo_left_img = self._load_logo(LOGO_LEFT, size=SCALINI_LOGO_SIZE)
         if self.logo_left_img:
             left_logo_label = ttk.Label(header_frame, image=self.logo_left_img)
         else:
@@ -55,12 +62,12 @@ class App:
         left_logo_label.pack(side="left", padx=10)
         
         # Title in the center
-        title_label = ttk.Label(header_frame, text="Sistema de Medición de Cuero", 
-                                font=("Helvetica", 16, "bold"))
+        title_label = ttk.Label(header_frame, text="Máquina de medir área de piel modelo 602", 
+                                font=("Helvetica", 20, "bold"))
         title_label.pack(side="left", expand=True)
         
         # Right logo
-        self.logo_right_img = self._load_logo(LOGO_RIGHT)
+        self.logo_right_img = self._load_logo(LOGO_RIGHT, size=CLIENT_LOGO_SIZE)
         if self.logo_right_img:
             right_logo_label = ttk.Label(header_frame, image=self.logo_right_img)
         else:
@@ -72,7 +79,7 @@ class App:
         control_frame = ttk.LabelFrame(self.root, text="Control de Sesión")
         control_frame.pack(fill="x", padx=10, pady=10)
 
-        ttk.Label(control_frame, text="Nombre del Cliente:").grid(row=0, column=0, padx=5, pady=5)
+        ttk.Label(control_frame, text="Nombre del archivo de sesión:").grid(row=0, column=0, padx=5, pady=5)
         self.client_entry = ttk.Entry(control_frame)
         self.client_entry.grid(row=0, column=1, padx=5, pady=5)
 
@@ -118,7 +125,7 @@ class App:
             return
 
         self.data_manager.create_session(client)
-        self.serial_processor = SerialProcessor(port=port)
+        self.serial_processor = SerialProcessor(port=port) # Initialize serial processor instance with specified port
         
         if self.serial_processor.start_reading():
             self.is_running = True
