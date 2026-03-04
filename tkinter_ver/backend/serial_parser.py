@@ -41,7 +41,7 @@ class SerialProcessor:
                 print(f"Lote {record['lote']}, Pieza {record['pieza']}: {record['area']} Dm²")
     """
     
-    def __init__(self, port: str, baudrate: int = 9600):
+    def __init__(self, port: str, baudrate: int = 4800):
         """
         Initialize the serial processor.
         
@@ -105,9 +105,14 @@ class SerialProcessor:
                     # Remove non-printable chars and ESC/POS artifacts (e.g., '@' from ESC @)
                     clean_line = re.sub(r'[^\x20-\x7E]', '', line).replace('@', '').strip()
                     self._parse_line(clean_line)
+                
+                    # Debug: show cleaned line
+                    print(f"Received line: {clean_line}")  
                 except Exception:
                     # Silently ignore malformed data to maintain continuous operation
-                    pass
+                    # pass
+                    # For debugging purposes, we can print the raw bytes that failed to decode/parse
+                    print(f"Error decoding/parsing line: {raw_bytes}")
 
     def _parse_line(self, line: str) -> None:
         """
