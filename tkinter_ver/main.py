@@ -1,9 +1,3 @@
-"""
-Author  :   Adrián Silva Palafox
-Date    :   2026-3-4
-Brief   :   Main application for the leather area measurement terminal. Provides a GUI
-            for real-time data display and session management of excel-logs.
-"""
 import sys
 import os
 import tkinter as tk
@@ -14,23 +8,17 @@ from backend.serial_parser import SerialProcessor
 from backend.data_manager import DataManager
 
 def get_resource_path(relative_path):
-    """
-    Returns the absolute path to a resource.
-    Resolves for both standard execution and PyInstaller _MEIPASS temp directory.
-    """
     if hasattr(sys, '_MEIPASS'):
         base_path = sys._MEIPASS
     else:
         base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     return os.path.join(base_path, relative_path)
 
-# Path to logo images
 LOGO_DIR = get_resource_path(os.path.join("docs", "companiesLogos"))
 LOGO_LEFT = os.path.join(LOGO_DIR, "scaliniLogo.jpg")
 LOGO_RIGHT = os.path.join(LOGO_DIR, "clienteLogo.jpg")
-CLIENT_LOGO_SIZE = (250, 150)   # Width x Height for logo display
-SCALINI_LOGO_SIZE = (400, 125)  # Size for Scalini logo
-
+CLIENT_LOGO_SIZE = (250, 150)
+SCALINI_LOGO_SIZE = (400, 125)
 
 class App:
     def __init__(self, root):
@@ -49,7 +37,6 @@ class App:
         self._poll_queue()
 
     def _load_logo(self, path, size):
-        """Load and resize a logo image. Returns None if file not found."""
         if os.path.exists(path):
             try:
                 img = Image.open(path)
@@ -60,12 +47,10 @@ class App:
         return None
 
     def _get_available_ports(self):
-        """Returns a list of active COM port strings."""
         ports = serial.tools.list_ports.comports()
         return [port.device for port in ports]
 
     def _refresh_ports(self):
-        """Updates the Combobox with currently available ports."""
         current_ports = self._get_available_ports()
         self.port_combo['values'] = current_ports
         if current_ports:
@@ -74,13 +59,11 @@ class App:
             self.port_combo.set("No ports found")
 
     def _select_directory(self):
-        """Opens a dialog to select the output directory."""
         selected_dir = filedialog.askdirectory(initialdir=self.dir_var.get(), title="Seleccionar Directorio")
         if selected_dir:
             self.dir_var.set(selected_dir)
 
     def _setup_ui(self):
-        # === Header frame with logos ===
         header_frame = ttk.Frame(self.root)
         header_frame.pack(fill="x", padx=10, pady=10)
         
@@ -88,29 +71,22 @@ class App:
         if self.logo_left_img:
             left_logo_label = ttk.Label(header_frame, image=self.logo_left_img)
         else:
-            left_logo_label = ttk.Label(header_frame, text="[Logo Empresa]", 
-                                        relief="sunken", width=15, anchor="center")
+            left_logo_label = ttk.Label(header_frame, text="[Logo Empresa]", relief="sunken", width=15, anchor="center")
         left_logo_label.pack(side="left", padx=10)
         
-        title_label = ttk.Label(header_frame, text= "MÁQUINA DE MEDICIÓN DE ÁREA DE PIEL\n" \
-                                                    "MODELO 602", 
-                                font=("Helvetica", 18, "bold"),
-                                anchor="center")
+        title_label = ttk.Label(header_frame, text= "MÁQUINA DE MEDICIÓN DE ÁREA DE PIEL\nMODELO 602", font=("Helvetica", 18, "bold"), anchor="center")
         title_label.pack(side="left", expand=True)
         
         self.logo_right_img = self._load_logo(LOGO_RIGHT, size=CLIENT_LOGO_SIZE)
         if self.logo_right_img:
             right_logo_label = ttk.Label(header_frame, image=self.logo_right_img)
         else:
-            right_logo_label = ttk.Label(header_frame, text="[Logo Cliente]", 
-                                         relief="sunken", width=15, anchor="center")
+            right_logo_label = ttk.Label(header_frame, text="[Logo Cliente]", relief="sunken", width=15, anchor="center")
         right_logo_label.pack(side="right", padx=10)
 
-        # === Control frame ===
         control_frame = ttk.LabelFrame(self.root, text="Control de Sesión")
         control_frame.pack(fill="x", padx=10, pady=10)
 
-        # Row 0: Directory Selection
         ttk.Label(control_frame, text="Directorio de salida:").grid(row=0, column=0, sticky="e", padx=5, pady=5)
         
         default_dir = os.path.abspath(os.path.join(os.getcwd(), "sessions"))
@@ -122,7 +98,6 @@ class App:
         self.dir_btn = ttk.Button(control_frame, text="Examinar...", command=self._select_directory)
         self.dir_btn.grid(row=0, column=3, padx=5, pady=5)
 
-        # Row 1: Session Parameters
         ttk.Label(control_frame, text="Nombre del cliente:").grid(row=1, column=0, sticky="e", padx=5, pady=5)
         self.client_entry = ttk.Entry(control_frame, width=20)
         self.client_entry.grid(row=1, column=1, sticky="w", padx=5, pady=5)
@@ -142,23 +117,20 @@ class App:
         self.stop_btn = ttk.Button(control_frame, text="Detener Sesión", command=self.stop_session, state="disabled")
         self.stop_btn.grid(row=1, column=6, padx=5, pady=5)
 
-        # === Data frame ===
         data_frame = ttk.LabelFrame(self.root, text="Datos de Medición en Tiempo Real")
         data_frame.pack(fill="both", expand=True, padx=10, pady=10)
 
-        columns = ("lote", "pieza", "area", "total_area")
+        columns = ("lote", "pieza", "area")
         self.tree = ttk.Treeview(data_frame, columns=columns, show="headings")
         self.tree.heading("lote", text="Lote")
         self.tree.heading("pieza", text="Pieza")
         self.tree.heading("area", text="Área (Dm²)")
-        self.tree.heading("total_area", text="Área Total (Dm²)")
         
         scrollbar = ttk.Scrollbar(data_frame, orient="vertical", command=self.tree.yview)
         self.tree.configure(yscrollcommand=scrollbar.set)
         scrollbar.pack(side="right", fill="y")
         self.tree.pack(fill="both", expand=True, padx=5, pady=5)
 
-        # === Status bar ===
         self.status_var = tk.StringVar(value="Estado: Esperando conexión...")
         status_bar = ttk.Label(self.root, textvariable=self.status_var, relief="sunken", anchor="w")
         status_bar.pack(fill="x", side="bottom", padx=10, pady=5)
@@ -204,10 +176,10 @@ class App:
             while not self.serial_processor.data_queue.empty():
                 data = self.serial_processor.data_queue.get()
                 
-                self.tree.insert("", "end", values=(data["lote"], data["pieza"], data["area"], data["total_area"]))
+                self.tree.insert("", "end", values=(data["lote"], data["pieza"], data["area"]))
                 self.tree.yview_moveto(1)
                 
-                self.data_manager.append_data(data["lote"], data["pieza"], data["area"], data["total_area"])
+                self.data_manager.append_data(data["lote"], data["pieza"], data["area"])
 
         self.root.after(100, self._poll_queue)
 
